@@ -8,21 +8,15 @@ using System.Threading.Tasks;
 
 namespace MyShop.Core.Models
 {
-    public  class Product
+    public  class Product : BaseEntity
     {
         [StringLength(20)]
         [DisplayName("Product Name")]
         public string Name { set; get; }
-        public string ID { set; get; }
         public string Description { set; get;  }
         public string Category { set; get; }
         public decimal Price { set; get; }
         public string Image { set; get; }
-
-        public Product()
-        {
-            ID = Guid.NewGuid().ToString();
-        }
     }
 
     
